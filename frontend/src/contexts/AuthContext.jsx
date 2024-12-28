@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (data) => {
     try {
       const response = await axios.post(
-        `${"http://localhost:8000/api"}/login`,
+        `${import.meta.env.VITE_API_URL}/login`,
         new URLSearchParams(data).toString(),
         {
           headers: {
